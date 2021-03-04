@@ -1,4 +1,5 @@
-# GLightbox
+# GLightbox-ssr
+This project is a fork from [glightbox](https://github.com/biati-digital/glightbox) that also works when using Server Side Rendering.
 
 GLightbox is a pure javascript lightbox. It can display images, iframes, inline content and videos with optional autoplay for YouTube, Vimeo and even self hosted videos.
 
@@ -15,6 +16,7 @@ GLightbox is a pure javascript lightbox. It can display images, iframes, inline 
 - **Zoomable images** - zoom and drag images on mobile and desktop
 - **API** - control the lightbox with the provided methods
 - **Themeable** - create your skin or modify the animations with some minor css changes
+- **SSR** - work with Server Side Rendering
 
 ## Live Demo
 
@@ -23,15 +25,15 @@ You can check the live demo [right here](https://nachojusticia.github.io/glightb
 ## Usage
 
 ```bash
-$ npm install glightbox
+$ npm install glightbox-ssr
 # OR
-$ yarn add glightbox
+$ yarn add glightbox-ssr
 # OR
-$ bower install glightbox
+$ bower install glightbox-ssr
 ```
 
 ```javascript
-import GLightbox from 'glightbox';
+import GLightbox from 'glightbox-ssr';
 ```
 
 Or manually download and link `glightbox.min.js` in your HTML:
@@ -42,8 +44,8 @@ Or manually download and link `glightbox.min.js` in your HTML:
 
 OR CDN
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox-ssr@3.0.8/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox-ssr@3.0.8/dist/js/glightbox.min.js"></script>
 
 <script type="text/javascript">
   const lightbox = GLightbox({ ...options });
