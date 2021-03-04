@@ -10,10 +10,11 @@ import touchNavigation from './core/touch-navigation.js';
 import Slide from './core/slide.js';
 import * as _ from './utils/helpers.js';
 
-const version = '3.0.7';
+const version = '3.0.8';
 const isMobile = _.isMobile();
 const isTouch = _.isTouch();
-const html = document.getElementsByTagName('html')[0];
+const isBrowser = _.isBrowser();
+const html = isBrowser && document.getElementsByTagName('html')[0];
 
 const defaults = {
     selector: '.glightbox',

@@ -1,12 +1,12 @@
 {
-  "name": "glightbox",
-  "version": "3.0.7",
+  "name": "glightbox-ssr",
+  "version": "3.0.8",
   "description": "Pure Javascript lightbox",
   "main": "dist/js/glightbox.min.js",
   "scripts": {
     "watch": "node development/watcher.js"
   },
-  "author": "Biati Digital",
+  "author": "NachoJusticia",
   "keywords": [
     "lightbox",
     "javascript",
@@ -14,12 +14,12 @@
     "popup"
   ],
   "license": "MIT",
-  "homepage": "https://biati-digital.github.io/glightbox/",
+  "homepage": "https://nachojusticia.github.io/glightbox-ssr/",
   "repository": {
-    "url": "https://github.com/biati-digital/glightbox",
+    "url": "https://nachojusticia.github.io/glightbox-ssr/",
     "type": "git"
   },
-  "bugs": "https://github.com/biati-digital/glightbox/issues",
+  "bugs": "https://github.com/NachoJusticia/glightbox-ssr/issues",
   "devDependencies": {
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",

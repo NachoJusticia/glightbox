@@ -506,11 +506,14 @@
     document.body.appendChild(script);
     return;
   }
+  function isBrowser() {
+    return typeof window !== 'undefined';
+  }
   function isMobile() {
-    return 'navigator' in window && window.navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i);
+    return isBrowser() && 'navigator' in window && window.navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i);
   }
   function isTouch() {
-    return isMobile() !== null || document.createTouch !== undefined || 'ontouchstart' in window || 'onmsgesturechange' in window || navigator.msMaxTouchPoints;
+    return isBrowser() && (isMobile() !== null || document.createTouch !== undefined || 'ontouchstart' in window || 'onmsgesturechange' in window || navigator.msMaxTouchPoints);
   }
   function isFunction(f) {
     return typeof f === 'function';
@@ -2368,13 +2371,15 @@
     return Slide;
   }();
 
-  var _version = '3.0.7';
+  var _version = '3.0.8';
 
   var isMobile$1 = isMobile();
 
   var isTouch$1 = isTouch();
 
-  var html = document.getElementsByTagName('html')[0];
+  var isBrowser$1 = isBrowser();
+
+  var html = isBrowser$1 && document.getElementsByTagName('html')[0];
   var defaults = {
     selector: '.glightbox',
     elements: null,

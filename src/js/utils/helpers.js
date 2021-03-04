@@ -491,12 +491,16 @@ export function injectAssets(url, waitFor, callback) {
     return;
 }
 
+export function isBrowser() {
+    return typeof window !== 'undefined';
+}
+
 export function isMobile() {
-    return ('navigator' in window && window.navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i));
+    return isBrowser() && ('navigator' in window && window.navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i));
 }
 
 export function isTouch() {
-    return isMobile() !== null || document.createTouch !== undefined || ('ontouchstart' in window) || ('onmsgesturechange' in window) || navigator.msMaxTouchPoints;
+    return isBrowser() && (isMobile() !== null || document.createTouch !== undefined || ('ontouchstart' in window) || ('onmsgesturechange' in window) || navigator.msMaxTouchPoints);
 }
 
 export function isFunction(f) {
